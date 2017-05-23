@@ -34,17 +34,28 @@ $white: #fff;
     img {
         width: 350px;
         float: left;
-        margin-right: 25%;
+        margin-right: 25%;    
+        margin-right: 15%;
+        position: absolute;
+        top: 5%;
+        left: 6%;
         @extend %animation;
     }
 
     h1 {
-        color: $white;
-        font-size: 30px;
+        width: 65%;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 100px;
         text-align: center;
+        font-family: 'PT Sans Narrow', sans-serif;
         float: left;
-        text-shadow: 5px 3px #a0a0a0;
+        position: absolute;
+        margin-left: 18%;
+        text-transform: uppercase;
+        top: 4%;
     }
+
 
     h2 {
         color: $white;

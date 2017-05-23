@@ -1,6 +1,9 @@
-@import 'reset';
+@import "compass";
+@import "compass/css3";
 
-$white: #fff;
+@import "var";
+
+@import 'reset';
 
 @keyframes spin {
     from {

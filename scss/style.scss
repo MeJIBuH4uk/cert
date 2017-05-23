@@ -1,16 +1,14 @@
 @import "compass";
 @import "compass/css3";
-
 @import "var";
-
 @import 'reset';
 
 @keyframes spin {
     from {
-        transform:rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -30,24 +28,83 @@
 #bg_cert {
     & {
         width: 1000px;
-        height: 600px;
+        height: 450px;
         padding: 10%;
+        overflow: hidden;
         position: relative;
-        background-image: url("../img/bg.jpg");
+        background-image: url("../img/bg2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
     }
 
-    img {
-        width: 290px;
+    .img {
+        overflow: hidden;
+        border-radius: 50%;
         float: left;
-        margin-right: 25%;    
         margin-right: 15%;
         position: absolute;
         top: 5%;
         left: 6%;
-        @extend %animation;
+
+        img {
+            width: 290px;
+            @extend %animation;
+            display: block;
+            z-index: 100;
+            position: relative;
+        }
+
+        .blick {
+            &-fst,
+            &-snd {
+                position: absolute;
+                z-index: 200;
+                height: 20%;
+                left: 0;
+                top: 0;
+                width: 20%;
+
+                &:after, &:before {
+                    content: '';
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    border-radius: 50%;
+                    background-color: $white;
+                }
+            }
+
+            &-fst:after {
+                opacity: 0.15;
+                top: 163px;
+                left: 104px;
+            }
+
+            &-fst:before {
+                opacity: 0.2;
+                left: 79px;
+                top: 150px;
+                width: 50px;
+                height: 50px;
+            }
+
+            &-snd:after {
+                opacity: 0.2;
+                left: 100px;
+                top: 150px;
+                width: 100px;
+                height: 100px;
+            }
+
+            &-snd:before {
+                opacity: 0.05;
+                left: 100px;
+                width: 200px;
+                height: 200px;
+                top: 150px;
+            }
+        }
     }
 
     h1 {
@@ -62,7 +119,7 @@
         text-transform: uppercase;
         top: 6%;
 
-        &:before, 
+        &:before,
         &:after {
             content: "Certificate";
             position: absolute;
@@ -80,28 +137,65 @@
         }
     }
 
-    .blick {
-        &-fst,
-        &-snd {
-            position: absolute;
-            height: 20%;
-            right: 0;
-            top: 0;
-            width: 20%;
-        }
-    }
-
     h2 {
         @extend .font-def;
+        margin-top: 118px;
+        margin-left: 358px;
+        font-size: 22px;
     }
 
     h3 {
-        color: $white;
+        @extend .font-def;
+        position: absolute;
+        top: 158px;
+        left: -87px;
+        transform: rotate(-90deg);
+    }
+
+    h4 {
+        color: black;
+        position: absolute;
+        right: 150px;
+        top: 40px;
+        font-size: 27px;
+        font-family: tahoma, sans-serif;
+        font-weight: normal;
+    }
+
+    h5 {
+        color: white;
+        position: absolute;
+        right: 44px;
+        top: 363px;
+        font-size: 27px;
+        font-family: tahoma, sans-serif;
+        font-weight: normal;
+        width: 200px;
+        line-height: 26px;
+    }
+
+    p {
+        position: absolute;
+        right: 100px;
+        bottom: 87px;
+        font-size: 22px;
+        font-family: tahoma, sans-serif;
+
+        a {
+            text-decoration: underline;
+            color: $white;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 
     .block {
-        &-first,
-        &-second {
+        &-01,
+        &-02,
+        &-03,
+        &-04 {
             & {
                 position: absolute;
                 height: 100%;
@@ -116,22 +210,43 @@
                 display: block;
                 width: 100%;
                 height: 33.333%;
+                background-color: $white;
             }
 
             &:before {
                 top: 33.333%;
-                background-color: rgba(255,255,255,0.5);
+                opacity: 0.7;
             }
 
             &:after {
                 top: 66.666%;
-                background-color: rgba(255,255,255,0.2);
+                opacity: 0.4;
             }
         }
 
-        &-second {
+        &-02 {
             right: 25%;
             top: 33.333%;
+            opacity: 0.3;
+
+            &:after {
+                opacity: 0.9;
+            }
+        }
+
+        &-03 {
+            top: 66.666%;
+            opacity: 0.7;
+
+            &:after {
+                opacity: 0.9;
+            }
+        }
+
+        &-04 {
+            left: 25%;
+            top: 33.333%;
+            opacity: 0.4;
         }
     }
 }

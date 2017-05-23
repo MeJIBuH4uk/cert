@@ -10,6 +10,7 @@ line_comments = false
 
 preferred_syntax = :scss
 output_style = :compact
+# output_style = :nested
 environment = :production
 
 sass_options = {:debug_info => false}

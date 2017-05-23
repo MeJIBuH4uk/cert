@@ -19,6 +19,14 @@ $white: #fff;
     z-index: 100;
 }
 
+
+.font-def {
+    color: $white;
+    font-family: Tahoma, sans-serif;
+}
+
+
+
 #bg_cert {
     & {
         width: 1000px;
@@ -32,7 +40,7 @@ $white: #fff;
     }
 
     img {
-        width: 350px;
+        width: 290px;
         float: left;
         margin-right: 25%;    
         margin-right: 15%;
@@ -44,21 +52,50 @@ $white: #fff;
 
     h1 {
         width: 65%;
-        color: #fff;
+        color: transparent;
         background-color: rgba(0, 0, 0, 0.5);
         font-size: 100px;
-        text-align: center;
         font-family: 'PT Sans Narrow', sans-serif;
         float: left;
         position: absolute;
-        margin-left: 18%;
+        margin-left: 13%;
         text-transform: uppercase;
-        top: 4%;
+        top: 6%;
+
+        &:before, 
+        &:after {
+            content: "Certificate";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            color: black;
+            margin-left: 15%;
+            letter-spacing: 10px;
+        }
+
+        &:after {
+            top: 0;
+            left: 0;
+            color: white;
+        }
+    }
+
+    .blick {
+        &-fst,
+        &-snd {
+            position: absolute;
+            height: 20%;
+            right: 0;
+            top: 0;
+            width: 20%;
+        }
+
+        
     }
 
 
     h2 {
-        color: $white;
+        @extend .font-def;
     }
 
     h3 {

@@ -22,7 +22,6 @@
 
 .font-def {
     color: $white;
-    font-family: Tahoma, sans-serif;
 }
 
 #bg_cert {
@@ -158,7 +157,6 @@
         right: 150px;
         top: 40px;
         font-size: 27px;
-        font-family: tahoma, sans-serif;
         font-weight: normal;
     }
 
@@ -168,7 +166,6 @@
         right: 44px;
         top: 363px;
         font-size: 27px;
-        font-family: tahoma, sans-serif;
         font-weight: normal;
         width: 200px;
         line-height: 26px;
@@ -179,7 +176,6 @@
         right: 100px;
         bottom: 87px;
         font-size: 22px;
-        font-family: tahoma, sans-serif;
 
         a {
             text-decoration: underline;
@@ -248,5 +244,16 @@
             top: 33.333%;
             opacity: 0.4;
         }
+    }
+
+    .info {
+        color: $white;
+        text-shadow: 1px 1px  2px #000;
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        font-size: 24px;
+        font-weight: normal;
+        width: 70%;
     }
 }
